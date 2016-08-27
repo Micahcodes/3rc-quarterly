@@ -1,0 +1,112 @@
+section {
+    padding: 100px 20px 100px 40px;
+
+    &#hero {
+        background: url('http://placehold.it/1080x600') no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 530px;
+        width: 100%;
+        margin-top: 54px;
+        padding: 0;
+    }
+
+    &#intro {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 80px 40px 0;
+    }
+
+    &#hills {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    &#work {
+    }
+
+    &#news {
+    }
+
+    &#insights {
+    }
+
+    &#picks {
+    }
+
+    &#spotlight {
+    }
+}
+
+
+@include mobile {
+    section {
+        padding: 80px 20px;
+        &#hero {
+            margin-top: 0;
+            height: 430px;
+            .content-wrap {
+                padding: 80px 0;
+                height: 270px;
+            }
+        }
+        &#hills {
+            .hill-problem {
+                margin-bottom: 30px;
+                .hill-question {
+                    img {
+                        float: none;
+                        width: 80%;
+                    }
+                    h4 {
+                        float: none;
+                        width: auto;
+                        padding: 0;
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .hill {
+                float: none;
+                width: auto;
+                overflow: hidden;
+                margin: 20px 0 20px;
+                img {
+                    float: left;
+                    width: auto;
+                    margin-right:20px;
+                }
+                p {
+                    float: left;
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+        }
+        &#user {
+            .user-pic {
+                float: none;
+                width: auto;
+                margin-bottom: 40px;
+                .ted {max-width: 480px}
+            }
+            .user-summary {
+                float: none;
+                width: auto;
+                padding-left: 0;
+                ul {
+                    margin: 0 0 20px;
+                }
+            }
+            .user-diagram {
+                float: none;
+                width: auto;
+                padding: 40px 0 0;
+            }
+        }
+        &#research {
+            img, h4 {display:none;}
+            a {width:280px;}
+        }
+    }
+}

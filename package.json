@@ -1,0 +1,20 @@
+{
+  "name": "homepage",
+  "authors": [
+    "Micah Stewart <stewart.micah@gmail.com>"
+  ],
+  "description": "A page update for 3RC Homepage",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.9"
+  }
+}

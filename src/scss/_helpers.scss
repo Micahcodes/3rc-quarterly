@@ -1,0 +1,45 @@
+@mixin mobile {
+  @media (max-width:767px) {@content;}
+}
+
+$purp1: #EED2FF;
+$purp2: #D7AAFF;
+$purp3: #BA8FF7;
+$purp4: #AF6EE8;
+$purp5: #9855D4;
+$blue: #6495ec;
+$red: #ce5e5e;
+$green: #3db472;
+
+html {font-size:1em;}
+body {
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 18px;
+    line-height: 1.45;
+	color: #3a3c4a;
+	font-weight: 400;
+	overflow-x: hidden;
+    margin: 0 auto;
+}
+p {margin-bottom: 1.3em;}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue',serif;
+    font-weight: inherit;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 1.414em 0 0.5em;
+}
+h1 {margin-top: 0; font-size: 3.157em;}
+h2 {font-size: 2.369em; margin:0 0 40px;}
+h3 {font-size: 1.777em;}
+h4 {font-size: 1.333em;}
+small, .font_small {font-size: 0.75em;}
+
+ul {padding:0}
+a, a:hover, a:focus {
+    outline: none !important; 
+    text-decoration: none;
+    color: #333;
+}
+a:focus, .btn:focus {outline:none;}
+.block {display:block}
