@@ -1,45 +1,103 @@
 @mixin mobile {
-  @media (max-width:767px) {@content;}
+   @media (max-width:767px){
+    @content;
+  }
+}
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Helvetica Neue Light.ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Helvetica Neue Medium.ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Helvetica Neue Bold.ttf');
+}
+$gray: #2d2d2d;
+$dark-gray: #1e1e1e;
+$green: #379649;
+$black: #000;
+$white: #fff;
+
+html {
+  font-size: 1em;
 }
 
-$purp1: #EED2FF;
-$purp2: #D7AAFF;
-$purp3: #BA8FF7;
-$purp4: #AF6EE8;
-$purp5: #9855D4;
-$blue: #6495ec;
-$red: #ce5e5e;
-$green: #3db472;
-
-html {font-size:1em;}
 body {
-	font-family: 'Helvetica Neue', sans-serif;
-	font-size: 18px;
-    line-height: 1.45;
-	color: #3a3c4a;
-	font-weight: 400;
-	overflow-x: hidden;
-    margin: 0 auto;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 400;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
-p {margin-bottom: 1.3em;}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica Neue',serif;
-    font-weight: inherit;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    margin: 1.414em 0 0.5em;
-}
-h1 {margin-top: 0; font-size: 3.157em;}
-h2 {font-size: 2.369em; margin:0 0 40px;}
-h3 {font-size: 1.777em;}
-h4 {font-size: 1.333em;}
-small, .font_small {font-size: 0.75em;}
 
-ul {padding:0}
-a, a:hover, a:focus {
-    outline: none !important; 
-    text-decoration: none;
-    color: #333;
+p {
+  margin-bottom: 1.3em;
 }
-a:focus, .btn:focus {outline:none;}
-.block {display:block}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: inherit;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin: 1.414em 0 0.5em 0;
+}
+
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size:2.369em;
+  margin: 0 0 40px;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+.font_small,
+small {
+  font-size: 0.75em;
+}
+
+ul {
+  padding: 0;
+}
+
+a,
+a:focus,
+a:hover {
+  outline: none !important;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn:focus,
+a:focus {
+  outline: none;
+}
+
+.block {
+  display: block;
+}

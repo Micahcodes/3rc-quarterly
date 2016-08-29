@@ -1,112 +1,163 @@
+#hero {
+  background: url('http://placehold.it/1080x600') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.work, .news, .insights, .picks, .spotlight {
+  padding: 100px 20px 100px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 section {
-    padding: 100px 20px 100px 40px;
+  &.bg-gray {
+    background-color: $gray;
+    color: $white;
+  }
+  &.bg-dark-gray {
+    background-color: $dark-gray;
+  }
+  &.bg-black {
+    background-color: $black;
+  }
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted $white;
+  }
+  h2 {
+    font-size: 29px;
+    font-weight: 700;
+    padding-top: 40px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.work {
+  border-bottom: 1px solid $white;
+  p {
+    margin-top: 0;
+    &.title {
+      font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+  }
+  .video {
+    margin-top: 40px;
+    // placeholder
+    img {
+      width: 100%;
+    }
+  }
+  .work-item-pics {
+    display: flex;
+    margin-top: 40px;
+    .work-item-pic {
+      width: 31%;
+      &:nth-child(2) {
+        margin: 0 3%;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  section {
+    padding: 80px 20px;
 
     &#hero {
-        background: url('http://placehold.it/1080x600') no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 530px;
-        width: 100%;
-        margin-top: 54px;
-        padding: 0;
-    }
+      margin-top: 0;
+      height: 430px;
 
-    &#intro {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 80px 40px 0;
+      .content-wrap {
+        padding: 80px 0;
+        height: 270px;
+      }
     }
 
     &#hills {
-        max-width: 960px;
-        margin: 0 auto;
-    }
+      .hill-problem {
+        margin-bottom: 30px;
 
-    &#work {
-    }
+        .hill-question {
+          img {
+            float: none;
+            width: 80%;
+          }
 
-    &#news {
-    }
-
-    &#insights {
-    }
-
-    &#picks {
-    }
-
-    &#spotlight {
-    }
-}
-
-
-@include mobile {
-    section {
-        padding: 80px 20px;
-        &#hero {
-            margin-top: 0;
-            height: 430px;
-            .content-wrap {
-                padding: 80px 0;
-                height: 270px;
-            }
+          h4 {
+            float: none;
+            width: auto;
+            padding: 0;
+            margin-top: 30px;
+          }
         }
-        &#hills {
-            .hill-problem {
-                margin-bottom: 30px;
-                .hill-question {
-                    img {
-                        float: none;
-                        width: 80%;
-                    }
-                    h4 {
-                        float: none;
-                        width: auto;
-                        padding: 0;
-                        margin-top: 30px;
-                    }
-                }
-            }
-            .hill {
-                float: none;
-                width: auto;
-                overflow: hidden;
-                margin: 20px 0 20px;
-                img {
-                    float: left;
-                    width: auto;
-                    margin-right:20px;
-                }
-                p {
-                    float: left;
-                    font-size: 16px;
-                    margin: 0;
-                }
-            }
+      }
+
+      .hill {
+        float: none;
+        width: auto;
+        overflow: hidden;
+        margin: 20px 0;
+
+        img {
+          float: left;
+          width: auto;
+          margin-right: 20px;
         }
-        &#user {
-            .user-pic {
-                float: none;
-                width: auto;
-                margin-bottom: 40px;
-                .ted {max-width: 480px}
-            }
-            .user-summary {
-                float: none;
-                width: auto;
-                padding-left: 0;
-                ul {
-                    margin: 0 0 20px;
-                }
-            }
-            .user-diagram {
-                float: none;
-                width: auto;
-                padding: 40px 0 0;
-            }
+
+        p {
+          float: left;
+          font-size: 16px;
+          margin: 0;
         }
-        &#research {
-            img, h4 {display:none;}
-            a {width:280px;}
-        }
+      }
     }
+
+    &#user {
+      .user-pic {
+        float: none;
+        width: auto;
+        margin-bottom: 40px;
+
+        .ted {
+          max-width: 480px;
+        }
+      }
+
+      .user-summary {
+        float: none;
+        width: auto;
+        padding-left: 0;
+
+        ul {
+          margin: 0 0 20px;
+        }
+      }
+
+      .user-diagram {
+        float: none;
+        width: auto;
+        padding: 40px 0 0;
+      }
+    }
+
+    &#research {
+      h4,
+      img {
+        display: none;
+      }
+
+      a {
+        width: 280px;
+      }
+    }
+  }
 }
