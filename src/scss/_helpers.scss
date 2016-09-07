@@ -24,6 +24,7 @@
 $gray: #2d2d2d;
 $dark-gray: #1e1e1e;
 $green: #379649;
+$dark-green: #297137;
 $black: #000;
 $white: #fff;
 
@@ -99,4 +100,7 @@ a:focus {
 
 .block {
   display: block;
+}
+.bold {
+  font-weight: 700;
 }

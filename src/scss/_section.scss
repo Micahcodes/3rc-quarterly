@@ -4,11 +4,11 @@
   background-position: center;
   height: 600px;
 }
-.work, .news, .insights, .picks, .spotlight {
-  padding: 100px 20px 100px 40px;
-  max-width: 960px;
+.center {
+  max-width: 1000px;
   margin: 0 auto;
 }
+
 section {
   color: $white;
   &.bg-gray {
@@ -17,6 +17,7 @@ section {
   }
   &.bg-dark-gray {
     background-color: $dark-gray;
+    padding-top: 100px;
   }
   &.bg-black {
     background-color: $black;
@@ -24,9 +25,8 @@ section {
   h1 {
     font-family: Arial, sans-serif;
     font-size: 32px;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-    border-bottom: 1px dotted $white;
+    text-align: center;
+    margin-bottom: 25px;
   }
   h2 {
     font-size: 29px;
@@ -36,18 +36,20 @@ section {
   p {
     font-size: 18px;
   }
+  .gray-border {
+    width: 100%;
+    height: 5px;
+    background-image: url('../assets/gray-circle.svg');
+    background-repeat: repeat;
+    background-size: contain;
+    margin-bottom: 50px;
+  }
 }
 
 .work {
+  padding: 100px 20px 100px 40px;
   h1 {
     text-align: center;
-  }
-  .gray-border {
-    width: 100%;
-    height: 2px;
-    background-image: url('../assets/gray-dot.svg');
-    background-repeat: repeat;
-    background-size: 2px;
   }
   p {
     margin-top: 0;
@@ -81,28 +83,30 @@ section {
 
 .news {
   padding-bottom: 0;
-  h1 {
-    text-align: center;
+  .news-bg {
+    width: 100%;
+    background-image: url('http://image.shutterstock.com/z/stock-photo-vintage-studio-room-background-with-retro-photo-frame-141293167.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
   h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 22px;
   }
-  .crescent {
+  .crescent-communities {
     padding: 40px 0;
-    margin-bottom: 40px;
-    background-image: url('http://image.shutterstock.com/z/stock-photo-vintage-studio-room-background-with-retro-photo-frame-141293167.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     .crescent-text {
       max-width: 500px;
     }
   }
 
-  .personel {
+  .personel-changes {
+    margin-top: 60px;
+    .personel {
     display: flex;
+    padding-top: 50px;
     margin-bottom: 40px;
-    padding-top: 40px;
     .person {
       flex-grow: 2;
       margin-right: 50px;
@@ -154,98 +158,108 @@ section {
       }
     }
   }
+  }
 }
 
-@include mobile {
-  section {
-    padding: 80px 20px;
-
-    &#hero {
-      margin-top: 0;
-      height: 430px;
-
-      .content-wrap {
-        padding: 80px 0;
-        height: 270px;
-      }
+.insights {
+  width: 100%;
+  margin-top: 100px;
+  padding: 70px 0 100px;
+  background-image: url('http://image.shutterstock.com/z/stock-photo-vintage-studio-room-background-with-retro-photo-frame-141293167.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .insight {
+    margin-top: 30px;
+  }
+  .insight-num {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: $green;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .insight-tip {
+    margin-left: 70px;
+    header {
+      font-size: 20px;
+      font-weight: 700;
     }
-
-    &#hills {
-      .hill-problem {
-        margin-bottom: 30px;
-
-        .hill-question {
-          img {
-            float: none;
-            width: 80%;
-          }
-
-          h4 {
-            float: none;
-            width: auto;
-            padding: 0;
-            margin-top: 30px;
-          }
-        }
-      }
-
-      .hill {
-        float: none;
-        width: auto;
-        overflow: hidden;
-        margin: 20px 0;
-
-        img {
-          float: left;
-          width: auto;
-          margin-right: 20px;
-        }
-
-        p {
-          float: left;
-          font-size: 16px;
-          margin: 0;
-        }
-      }
+    p {
+      margin-top: 5px;
     }
+  }
+}
 
-    &#user {
-      .user-pic {
-        float: none;
-        width: auto;
-        margin-bottom: 40px;
-
-        .ted {
-          max-width: 480px;
-        }
-      }
-
-      .user-summary {
-        float: none;
-        width: auto;
-        padding-left: 0;
-
-        ul {
-          margin: 0 0 20px;
-        }
-      }
-
-      .user-diagram {
-        float: none;
-        width: auto;
-        padding: 40px 0 0;
-      }
-    }
-
-    &#research {
-      h4,
+.picks {
+  margin-top: 90px;
+  padding-bottom: 120px;
+  .pick-wrap {
+    display: flex;
+    .pick {
+      flex:1;
       img {
-        display: none;
-      }
-
-      a {
-        width: 280px;
+        width: 100%;
       }
     }
   }
+}
+
+.spotlight {
+  padding: 100px 20px 100px 40px;
+  .aarons-pic {
+    background: url('http://image.shutterstock.com/z/stock-photo-portrait-of-long-beard-and-mustache-man-320936999.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto 40px;
+  }
+  .spotlight-questions {
+    display: flex;
+    .question {
+      flex: 1;
+      header {
+        color: $green;
+        font-size: 20px;
+      }
+      &:nth-child(2) {
+        margin: 0 60px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $green;
+  padding: 25px 0;
+  text-align: center;
+  a {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: 10px;
+    color: $white;
+    margin: 0 20px;
+    &:hover {
+      color: $white;
+    }
+    svg {
+      height: 20px;
+      fill: $white;
+    }
+    span {
+      display: inline-block;
+      vertical-align: top;
+      margin: 2px 0 0 5px;
+    }
+  }
+}
+
+@include mobile {
 }
